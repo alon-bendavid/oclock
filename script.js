@@ -14,18 +14,36 @@ function clockTime(){
 let milisecond = time.getMilliseconds() / 100;
 //present only the current time
 let localTime = time.toLocaleTimeString();
-console.log(localTime);
-let currentTime = (hour +" " + minute +" "+ second+" " +milisecond );
-// console.log(currentTime);
+// console.log(localTime);
+let currentTime = (hour +" " + minute +" "+ second);
+console.log(currentTime);
 // clock.innerHTML = time;
-clock.innerHTML = localTime;
+// }
+let t = setTimeout(clockTime, 100);
 
-let t = setTimeout(function(){ clockTime() }, 100);
-}
-clockTime();   
+  if ( currentTime  == "21 36 50") {
+    clock.innerHTML = "time to wake up!!";
+    alert("stop") ;
+  }
+else{
+  clock.innerHTML = localTime;
+} 
+    // if (clock.innerHTML == "9:20:10")  {
+    //   clock.innerHTML = "wake up!";
+    // }
+  // }
+  
+  }
+// let t = setTimeout(function(){ clockTime() }, 100);
+
+
+
+// clockTime();
+
 // clock();
 
-
+clock.innerHTML = clockTime();
+alarmClock();
 
 // function time(){
 //     while(true){
