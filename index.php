@@ -13,7 +13,7 @@
 <body>
     <div class="clock-house">
         <h2 id="clock"></h2>
-        <form action="" class="setAlarm">
+        <form action="" class="setAlarm" id="form">
             <input id="task" type="text" placeholder="Type a task">
             <select id="hour">
                 <?php
@@ -35,7 +35,7 @@
             </select>
             <select id="minute">
                 <?php
-                for ($minuets = 1; $minuets <= 59; $minuets++) {
+                for ($minuets = 0; $minuets <= 59; $minuets++) {
                 ?>
                     <?php $num = sprintf("%02d", $minuets);
                     // if ($num == "24") {
@@ -56,13 +56,14 @@
 
             </select>
             <input type="hidden" value="00" id="seconds">
-            <button class="submitBtn">Set</button>
+            <button type="submit" class="submitBtn">Set</button>
             <!-- <input class="submitBtn" type="button" placeholder="Set Alarm"> -->
 
         </form>
 
 
     </div>
+
 
 </body>
 

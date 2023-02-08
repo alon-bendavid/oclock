@@ -2,18 +2,29 @@
 
 //selctors
 const clock = document.querySelector("#clock");
-
+const btn = document.querySelector("#submitBtn");
 //form selctor
 let hour = document.querySelector("#hour");
 let minute = document.querySelector("#minute");
 let seconds = document.querySelector("#seconds");
 let ampm = document.querySelector("#AMPM");
-// let alarmTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
-function alarmClock(inputTime){
+let task = document.querySelector("#task");
+const form = document.getElementById("form");
+
+let tasks = [];
+
+
+
+
 let alarmTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
+function alarmClock(){
+  
+  let alarmTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
+
+
   
   // console.log(hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value);
-  console.log(alarmTime);
+  // console.log(alarmTime);
 
   // let inputTime = `${hour}:${minutes}:${seconds} ${AM}`;
   const time = new Date();
@@ -25,8 +36,8 @@ console.log(localTime);
 let t = setTimeout(alarmClock, 1000);
 
     if ( localTime  == alarmTime) {
-      clock.innerHTML = "time to wake up!!";
-      alert("stop") ;
+      clock.innerHTML = "Time to wake up!!! ";
+      // alert("stop") ;
     }
   else{
     clock.innerHTML = localTime;
@@ -34,10 +45,15 @@ let t = setTimeout(alarmClock, 1000);
 
   
   }
+  function handleForm(event) { 
+  event.preventDefault();
+  
+tasks.push( { time: alarmTime, message: task.value });
+console.log(tasks);
+} 
+form.addEventListener('submit', handleForm);
 
-  alarmClock(11,35,15,"AM");
-
-
+  alarmClock();
 
 
   
