@@ -13,6 +13,54 @@
 <body>
     <div class="clock-house">
         <h2 id="clock"></h2>
+        <form action="" class="setAlarm">
+            <input id="task" type="text" placeholder="Type a task">
+            <select id="hour">
+                <?php
+                for ($hour = 1; $hour <= 12; $hour++) {
+                ?>
+                    <?php
+                    // $num = sprintf("%02d", $hour);
+                    // if ($num == "24") {
+                    //     $num = "00";
+                    // }
+
+                    ?>
+                    <option><?php echo $hour ?></option>
+                <?php
+                }
+                ?>
+                <!-- <option value="volvo">teste</option> -->
+
+            </select>
+            <select id="minute">
+                <?php
+                for ($minuets = 1; $minuets <= 59; $minuets++) {
+                ?>
+                    <?php $num = sprintf("%02d", $minuets);
+                    // if ($num == "24") {
+                    //     $num = "00";
+                    // }
+
+                    ?>
+                    <option><?php echo $num ?></option>
+                <?php
+                }
+                ?>
+                <!-- <option value="volvo">teste</option> -->
+
+            </select>
+            <select id="AMPM">
+                <option>AM</option>
+                <option>PM</option>
+
+            </select>
+            <input type="hidden" value="00" id="seconds">
+            <button class="submitBtn">Set</button>
+            <!-- <input class="submitBtn" type="button" placeholder="Set Alarm"> -->
+
+        </form>
+
 
     </div>
 

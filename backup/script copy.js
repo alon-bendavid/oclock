@@ -1,54 +1,56 @@
-
-
-//selctors
-const clock = document.querySelector("#clock");
-
-//form selctor
-let hour = document.querySelector("#hour");
-let minute = document.querySelector("#minute");
-let seconds = document.querySelector("#seconds");
-let ampm = document.querySelector("#AMPM");
-// let alarmTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
-function alarmClock(inputTime){
-let alarmTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
+// This example takes 2 seconds to run
+function clockTime(){
   
-  // console.log(hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value);
-  console.log(alarmTime);
-
-  // let inputTime = `${hour}:${minutes}:${seconds} ${AM}`;
+  
+  // const time = new Date();
   const time = new Date();
-
+  // console.log(time);
+  
+  const clock = document.querySelector("#clock");
+  
+  let hour = time.getHours();
+  let minute =time.getMinutes();
+  let second = time.getSeconds();
+let milisecond = time.getMilliseconds() / 100;
+//present only the current time
 let localTime = time.toLocaleTimeString();
-// localTime.split();
-console.log(localTime);
+// console.log(localTime);
+let currentTime = (hour +" " + minute +" "+ second);
+console.log(currentTime);
+// clock.innerHTML = time;
+// }
+let t = setTimeout(clockTime, 100);
 
-let t = setTimeout(alarmClock, 1000);
-
-    if ( localTime  == alarmTime) {
-      clock.innerHTML = "time to wake up!!";
-      alert("stop") ;
-    }
-  else{
-    clock.innerHTML = localTime;
-  } 
-
+//   if ( currentTime  == "10 24 25") {
+//     clock.innerHTML = "time to wake up!!";
+//     alert("stop") ;
+//   }
+// else{
+//   clock.innerHTML = localTime;
+// } 
+    // if (clock.innerHTML == "9:20:10")  {
+    //   clock.innerHTML = "wake up!";
+    // }
+  // }
+  clock.innerHTML = localTime;
   
   }
-
-  alarmClock(11,35,15,"AM");
-
-
-
-
-  
 // let t = setTimeout(function(){ clockTime() }, 100);
 
+function alarmClock(){
+  if (currentTime  == "10 31 30") {
+    clock.innerHTML = "time to wake up!!";
+    alert("stop") ;
 
+} 
+
+}
 
 // clockTime();
 
 // clock();
 
+ clockTime();
 // function time(){
 //     while(true){
 //         console.log(start);
