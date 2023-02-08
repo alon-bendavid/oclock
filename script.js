@@ -16,7 +16,7 @@ let tasks = [];
 
 
 
-let alarmTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
+// let stroedTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
 function alarmClock(){
   
   let alarmTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
@@ -24,7 +24,7 @@ function alarmClock(){
 
   
   // console.log(hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value);
-  // console.log(alarmTime);
+  console.log(alarmTime);
 
   // let inputTime = `${hour}:${minutes}:${seconds} ${AM}`;
   const time = new Date();
@@ -48,7 +48,7 @@ let t = setTimeout(alarmClock, 1000);
   function handleForm(event) { 
   event.preventDefault();
   
-tasks.push( { time: alarmTime, message: task.value });
+tasks.push( { time:hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value, message: task.value });
 console.log(tasks);
 } 
 form.addEventListener('submit', handleForm);

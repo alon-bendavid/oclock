@@ -51,8 +51,8 @@
 
             </select>
             <select id="AMPM">
-                <option>AM</option>
-                <option>PM</option>
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
 
             </select>
             <input type="hidden" value="00" id="seconds">
