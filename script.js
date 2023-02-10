@@ -43,6 +43,10 @@ function alarmClock(){
       if ( localTime  == element.time) {
         clock.innerHTML = "Time to wake up!!! ";
         // alert("stop") ;
+        var playButton = document.getElementById("play-button");
+        var video = document.getElementById("video");
+        video.style.display = "block";
+        video.src = "https://www.youtube.com/embed/SPlQpGeTbIE?autoplay=1";
       }
   
       else{
@@ -82,9 +86,15 @@ function handleForm(event) {
   alarmClock();
   
   
+  //run youtube song
   
-  
-  
+//   var playButton = document.getElementById("play-button");
+// var video = document.getElementById("video");
+
+// playButton.addEventListener("click", function() {
+//   video.style.display = "block";
+//   video.src = "https://www.youtube.com/embed/SPlQpGeTbIE?autoplay=1";
+// });
   
   
   // let stroedTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
