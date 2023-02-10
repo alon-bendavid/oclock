@@ -32,16 +32,27 @@ function alarmClock(){
   // console.log(localTime);
   
   let t = setTimeout(alarmClock, 1000);
-  
-  if ( localTime  == alarmTime) {
-    clock.innerHTML = "Time to wake up!!! ";
-    // alert("stop") ;
-  }
-  else{
+  // clock.innerHTML = localTime;
+  if (tasks.length === 0){
     clock.innerHTML = localTime;
-  } 
+
+  }else{
+
+
+    tasks.forEach(element => {
+      if ( localTime  == element.time) {
+        clock.innerHTML = "Time to wake up!!! ";
+        // alert("stop") ;
+      }
   
-  return localTime;
+      else{
+        clock.innerHTML = localTime;
+      }
+   
+    });
+  }
+  console.log(tasks);
+  // return localTime;
 }
 //handle the form and create the task list on the page
 function handleForm(event) { 
@@ -61,6 +72,12 @@ function handleForm(event) {
     alarmList.appendChild(item);
   }
   }
+  
+  
+  
+  
+  
+  
   form.addEventListener('submit', handleForm);
   alarmClock();
   
