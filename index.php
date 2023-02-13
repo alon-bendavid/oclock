@@ -14,7 +14,7 @@
     <button id="AlarmClock">Alarm Clock</button>
     <button id="StopWatch">Stop Watch</button>
     <button id="Timer">Timer</button>
-
+    <!-- Alram clock program -->
     <div class="clock-house">
         <h2 id="clock"></h2>
         <form action="" class="setAlarm" id="form">
@@ -68,8 +68,19 @@
         <ul id="alarmList">
 
         </ul>
-        <iframe id="video" width="" height="" src="" style="display: none;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p id="taskIs"></p>
+        <iframe id="video" width="320px" height="" src="" style="display: none;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    <!-- //Timer program -->
+    <div id="TimerHouse">
+        <button id="upBtn"> Increase</button>
+        <button id="downBtn"> Decrease</button>
+        <input type="text" placeholder="time count format 00:00">
+
+
+
+    </div>
+
 
 </body>
 

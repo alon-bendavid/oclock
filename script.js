@@ -9,6 +9,7 @@ let minute = document.querySelector("#minute");
 let seconds = document.querySelector("#seconds");
 let ampm = document.querySelector("#AMPM");
 let task = document.querySelector("#task");
+const taskIs = document.getElementById("taskIs");
 const form = document.getElementById("form");
 const clockHouse = document.querySelector(".clock-house")
 
@@ -54,6 +55,7 @@ function alarmClock(){
         var video = document.getElementById("video");
         video.style.display = "block";
         video.src = "https://www.youtube.com/embed/SPlQpGeTbIE?autoplay=1";
+      taskIs.innerHTML = "this alram is set for- " + this.task.value;
       }
   
       else{
@@ -111,7 +113,18 @@ console.log('alarmclockbtn works')
 
   
   
- 
+  
+ Timer.addEventListener('click', function() {
+  clockHouse.style.display = 'none';
+  clockHouse.style.display = 'none';
+
+
+  // StopWatch.style = 'block';
+  console.log('stopwatchbtn works');
+
+
+ }) 
+
   
   
   //run youtube song
