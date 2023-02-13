@@ -60,7 +60,7 @@
 
             </select>
             <input type="hidden" value="00" id="seconds">
-            <button type="submit" class="submitBtn">Set</button>
+            <button type="submit" class="submitBtn">Set an alarm</button>
 
         </form>
 
@@ -72,12 +72,17 @@
         <iframe id="video" width="320px" height="" src="" style="display: none;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- //Timer program -->
-    <div id="TimerHouse">
-        <button id="upBtn"> Increase</button>
-        <button id="downBtn"> Decrease</button>
+    <div id="StopWatchHouse">
+        <!-- <button id="upBtn"> Increase</button> -->
+        <!-- <button id="downBtn"> Decrease</button> -->
         <input type="text" placeholder="time count format 00:00">
 
-
+        <select id="hours">
+        </select>
+        <!-- <div id="hours-display"></div>  -->
+        <select id="minutes">
+        </select>
+        <!-- <div id="minutes-display">1</div> -->
 
     </div>
 

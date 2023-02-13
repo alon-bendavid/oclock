@@ -106,3 +106,22 @@ form.setAlarm {
 
   form.setAlarm button.submitBtn:hover {
     background-color: #ff0e5e; }
+
+
+    /* //weel scrool */
+
+ select {
+  appearance: none;
+  border: 1px solid gray;
+  background-color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  min-width: 60px;
+  height: 40px;
+  text-align: center;
+}
+
+#hours-display, #minutes-display {
+  font-size: 20px;
+}

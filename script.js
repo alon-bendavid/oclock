@@ -140,4 +140,3 @@ console.log('alarmclockbtn works')
   
   // let stroedTime = hour.value +":"+ minute.value +":"+ seconds.value +" "+ ampm.value;
   
-
