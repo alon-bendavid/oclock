@@ -10,6 +10,13 @@ let seconds = document.querySelector("#seconds");
 let ampm = document.querySelector("#AMPM");
 let task = document.querySelector("#task");
 const form = document.getElementById("form");
+const clockHouse = document.querySelector(".clock-house")
+
+//select programs selectors
+const AlarmClock = document.getElementById("AlarmClock")
+const StopWatch = document.getElementById("StopWatch")
+const Timer = document.getElementById("Timer")
+
 
 
 let alarmList = document.getElementById("alarmList");
@@ -79,11 +86,32 @@ function handleForm(event) {
   
   
   
-  
-  
-  
+ //event listeners
+ AlarmClock.addEventListener('click', function() {
+  clockHouse.style.display = 'flex';
+
+  form.style.display = 'flex';
   form.addEventListener('submit', handleForm);
   alarmClock();
+console.log('alarmclockbtn works')
+ }) 
+ 
+ 
+ 
+ 
+ 
+ StopWatch.addEventListener('click', function() {
+  clockHouse.style.display = 'none';
+
+  // StopWatch.style = 'block';
+  console.log('stopwatchbtn works');
+
+
+ }) 
+
+  
+  
+ 
   
   
   //run youtube song

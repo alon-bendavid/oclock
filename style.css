@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -11,12 +11,12 @@
     height: 100vh;
 } */
 .clock-house{
-    /* background-color: aqua; */
+    background-color: aqua  ;
     /* width: 100%; */
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
-    /* height: 100vh; */
+    /* height: 50vh; */
 align-items: center;
 }
 #clock{
@@ -24,10 +24,13 @@ align-items: center;
     font-family: 'Montserrat', sans-serif;
 font-weight: 900;
 font-size:8vw;
+margin-top: 5%;
 }
 .setAlarm{
 background-color: brown;
-min-width: 35%;
+/* min-width: 35%; */
+display: flex;
+flex-wrap: wrap;
 
 }
 
@@ -41,3 +44,65 @@ min-width: 35%;
 #alarmList{
     /* background-color: aqua; */
 }
+li{
+    font-weight: 500;
+font-size: medium;
+list-style: none;
+}
+#video{
+    min-width: 50%;
+}
+/* .clock-house{
+    display: none;
+} */
+
+
+/* /////////////////////////////////////////////////////////// */
+#form{
+    display: none;
+}
+
+form.setAlarm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  form.setAlarm input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  form.setAlarm select {
+    width: 60px;
+    height: 40px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  form.setAlarm button.submitBtn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  form.setAlarm button.submitBtn:hover {
+    background-color: #3e8e41; }

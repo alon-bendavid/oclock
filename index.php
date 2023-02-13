@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <button id="AlarmClock">Alarm Clock</button>
+    <button id="StopWatch">Stop Watch</button>
+    <button id="Timer">Timer</button>
+
     <div class="clock-house">
         <h2 id="clock"></h2>
         <form action="" class="setAlarm" id="form">
@@ -57,17 +61,15 @@
             </select>
             <input type="hidden" value="00" id="seconds">
             <button type="submit" class="submitBtn">Set</button>
-            <!-- <input class="submitBtn" type="button" placeholder="Set Alarm"> -->
 
         </form>
 
 
-    </div>
-    <ul id="alarmList">
-        <a href=""></a>
+        <ul id="alarmList">
 
-    </ul>
-    <iframe id="video" width="560" height="315" src="" style="display: none;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </ul>
+        <iframe id="video" width="" height="" src="" style="display: none;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
 </body>
 
